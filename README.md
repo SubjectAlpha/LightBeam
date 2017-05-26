@@ -1,3 +1,3 @@
-##LightBeam
+LightBeam
 ---
-
+Execute via jar file
