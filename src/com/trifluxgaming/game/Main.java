@@ -118,6 +118,13 @@ public class Main extends Canvas implements Runnable{
         }else if(gameState == STATE.Menu || gameState == STATE.End || gameState == STATE.Win){
             menu.tick();
         }
+        if(HUD.HEALTH <= 0 && gameState == STATE.Pause){
+            run.hud.gamePaused = false;
+            run.spawner.spawnPaused = false;
+            run.spawner.handler.tempObject.resume();
+            gameState = STATE.End;
+            handler.ClearEnemies();
+        }
     }
 
     private void render(){
@@ -134,7 +141,7 @@ public class Main extends Canvas implements Runnable{
 
         handler.render(g);
 
-        if(gameState == STATE.Game){
+        if(gameState == STATE.Game || gameState == STATE.Pause){
             hud.render(g);
         }else if(gameState == STATE.Menu || gameState == STATE.Help || gameState == STATE.End|| gameState == STATE.Win){
             menu.render(g);

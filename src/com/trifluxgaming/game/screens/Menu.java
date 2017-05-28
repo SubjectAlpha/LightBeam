@@ -125,7 +125,7 @@ public class Menu extends MouseAdapter{
             g.drawString("Quit", 270, 390);
 
             g.setFont(fnt4);
-            g.drawString("Version 1.1", 540, 425);
+            g.drawString("Version 1:5.28.17", 510, 425);
         }else if(Main.gameState == Main.STATE.Help){
             g.setFont(fnt);
             g.setColor(Color.black);

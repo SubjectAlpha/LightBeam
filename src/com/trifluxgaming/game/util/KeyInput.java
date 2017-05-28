@@ -52,6 +52,7 @@ public class KeyInput extends KeyAdapter{
                 tempObject.pause();
                 Main.run.hud.gamePaused = true;
                 Main.run.spawner.spawnPaused = true;
+                Main.gameState = Main.STATE.Pause;
             }
             keyDown[8] = true;
         }else if(key == KeyEvent.VK_ESCAPE){
@@ -60,6 +61,7 @@ public class KeyInput extends KeyAdapter{
                 tempObject.resume();
                 Main.run.hud.gamePaused = false;
                 Main.run.spawner.spawnPaused = false;
+                Main.gameState = Main.STATE.Game;
             }
             keyDown[9] = true;
         }

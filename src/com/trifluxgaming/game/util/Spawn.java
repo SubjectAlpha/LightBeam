@@ -9,7 +9,7 @@ import java.util.Random;
 
 public class Spawn {
 
-    private Handler handler;
+    public Handler handler;
     public HUD hud;
     private Random r = new Random();
 
